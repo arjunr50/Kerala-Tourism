@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="logo">
+              <a href="index.html"><img  src="Images/logo.png" alt="Logo" height:"100" width="100"></a>
+            </div>
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Districts
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="districts/All.html">All Districts</a></li>
+                    <li><a class="dropdown-item" href="districts/Alappuzha.html">Alappuzha</a></li>
+                    <li><a class="dropdown-item" href="districts/Ernakulam.html">Ernakulam</a></li>
+                    <li><a class="dropdown-item" href="districts/Idukki.html">Idukki</a></li>
+                    <li><a class="dropdown-item" href="districts/Kannur.html">Kannur</a></li>
+                    <li><a class="dropdown-item" href="districts/Kasargod.html">Kasargod</a></li>
+                    <li><a class="dropdown-item" href="districts/Kollam.html">Kollam</a></li>
+                    <li><a class="dropdown-item" href="districts/Kottayam.html">Kottayam</a></li>
+                    <li><a class="dropdown-item" href="districts/Kozhikode.html">Kozhikode</a></li>
+                    <li><a class="dropdown-item" href="districts/Malappuram.html">Malappuram</a></li>
+                    <li><a class="dropdown-item" href="districts/Palakaad.html">Palakaad</a></li>
+                    <li><a class="dropdown-item" href="districts/Pathanamthitta.html">Pathanamthitta</a></li>
+                    <li><a class="dropdown-item" href="districts/Trivandrum.html">Trivandrum</a></li>
+                    <li><a class="dropdown-item" href="districts/Thrissur.html">Thrissur</a></li>
+                    <li><a class="dropdown-item" href="districts/Wayanad.html">Wayanad</a></li>
+               </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signin.html">Sign In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+   
+    <div class="sidebar">
+        
+        <form action="#" class="login" onsubmit="return val();">
+            <h2>Sign up</h2>
+        
+        <div class="login-cont">
+            <label><b>Name</b></label>
+            <br>
+            <input type="text" placeholder="Enter your Name" id="name" >
+            <label for="error" id = "error"> </label>
+        </div>
+        <br>
+        <div class="login-cont">
+            <label><b>Email</b></label>
+            <br>
+            <input type="email" placeholder="Enter Email Id" id="email">
+            <label for="error1" id = "error1"> </label>
+        </div>
+        <br>
+        <div  class="login-cont">
+            <label for="password"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Enter Your Password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"onkeyup="validatePassword(this.value);"/><span id="msg"></span>
+            <label for="error2" id = "error2"> </label>
+        </div>
+        <br>
+        <div  class="login-cont">
+            <label><b>Re-Enter Password</b></label>
+            <br>
+            <input type="password" placeholder="Re-Enter Your Password" id="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <label for="error3" id = "error3"> </label>
+        </div>
+        <br>
+        <div  class="login-cont">
+            <label><b>Phone Number</b></label>
+            <br>
+            <input type="tel" placeholder="Enter Your Mobile No." id="num" onkeypress="return isNumberKey(event)">
+            <label for="error4" id = "error4"> </label>
+        </div>
+        <br>
+        <div >
+            <button id="submit">Submit</button>
+        </div>
+        <br>
+        
+        </div>
+        </form>
+        <script src="js/signupform.js"></script>
+        <script>
+          function validatePassword(password) {
+              
+              // Do not show anything when the length of password is zero.
+              if (password.length === 0) {
+                  document.getElementById("msg").innerHTML = "";
+                  return;
+              }
+              // Create an array and push all possible values that you want in password
+              var matchedCase = new Array();
+              matchedCase.push("[$@$!%*#?&]"); // Special Charector
+              matchedCase.push("[A-Z]");      // Uppercase Alpabates
+              matchedCase.push("[0-9]");      // Numbers
+              matchedCase.push("[a-z]");     // Lowercase Alphabates
+
+              // Check the conditions
+              var ctr = 0;
+              for (var i = 0; i < matchedCase.length; i++) {
+                  if (new RegExp(matchedCase[i]).test(password)) {
+                      ctr++;
+                  }
+              }
+              // Display it
+              var color = "";
+              var strength = "";
+              switch (ctr) {
+                  case 0:
+                  case 1:
+                  case 2:
+                      strength = "Very Weak";
+                      color = "red";
+                      break;
+                  case 3:
+                      strength = "Medium";
+                      color = "orange";
+                      break;
+                  case 4:
+                      strength = "Strong";
+                      color = "green";
+                      break;
+              }
+              document.getElementById("msg").innerHTML = strength;
+              document.getElementById("msg").style.color = color;
+          }
+          function isNumberKey(evt){
+            document.getElementById("error4").innerHTML="";
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57)){
+              document.getElementById("error4").innerHTML="<b>Only numbers are allowed<b>";
+              document.getElementById("error4").style.color="red";
+              document.getElementById("error4").style.fontFamily="ariel";
+              return false;
+            }
+            return true;
+          }
+      </script>
+        
+        <div class="xyz">
+        <h3 >
+            <b>“I travel not to go anywhere, but to go. I travel for travel’s sake. The great affair is to move.”
+                ― Robert Louis Stevenson</b>
+        </h3>
+        </div>
+       <br>
+
+    </div>
+        <!--<footer>
+            <h5>Department of Tourism, Government of Kerala, Park View, Thiruvananthapuram, Kerala, India - 695 033021
+            All rights reserved © Kerala Tourism 2021.</h5>
+        </footer>-->
+  </body>
+</html>
