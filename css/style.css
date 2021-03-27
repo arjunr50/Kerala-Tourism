@@ -1,0 +1,86 @@
+*{ 
+    padding: 0px;
+    margin: 0px;
+}
+.navbar-nav{
+    margin-left: auto;
+    margin-right: 7em;
+}
+.logo{
+    margin-left:3em;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+
+p{
+   
+    font-family:'Courier New', Courier, monospace;
+    text-align: justify;
+    
+    margin-left: 1em;
+    padding: 0.8em;
+}
+.sidebar{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(0, 0, 0);
+    padding:100px;
+}
+.sidebar h3{
+    
+    margin-bottom: 5px;
+}
+
+.login{
+    float:right;
+    border:3px solid red;
+    border-radius: 1cm;
+    background-color: beige;
+    color:black;
+    height:28em;
+    
+    padding: 50px;
+    
+    margin-right:3%;
+    width: 300px;
+}
+.login h2{
+    text-align: center;
+}
+.login #submit{
+    width: 100%;
+    height:1.8em;
+    color:white;
+    background-color:dodgerblue;
+    border: 1px solid dodgerblue;
+}
+footer{
+    margin-top: 2em;
+    color: black;
+    background-color: rgb(153, 115, 115);
+    height :8.5em;
+    margin-top: 10%;
+}
+footer h5{
+    margin-top: 1em;
+    padding: .5em;
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.xyz{
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: left   ;
+    
+}
+p{
+    margin-left:5cm ;
+    margin-right: 5cm;
+}
+a{
+    color: black;
+}
