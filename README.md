@@ -10,5 +10,5 @@ __Web app having__
 
 * Contains Sign in and sign up page with form validation
 
-Hosted at : www.arjunr.cf/kerala-tourism/(www.arjunr.cf/kerala-tourism/)
+Hosted at : www.arjunr.cf/kerala-tourism/
 
