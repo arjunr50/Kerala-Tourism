@@ -2,7 +2,7 @@
 - - - -
 __Web app having__
 
-Markup : *Different pages for each district
+Markup : * Different pages for each district
 
 *Form validation using JavaScript
 
